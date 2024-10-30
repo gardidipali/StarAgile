@@ -18,14 +18,14 @@ public class Amaezon_Chrome {
 	@Test
 		public void Homepagein() throws MalformedURLException, URISyntaxException {
 		
-//			DesiredCapabilities caps = new DesiredCapabilities();
+			DesiredCapabilities caps = new DesiredCapabilities();
 			
-//			caps.setBrowserName("chrome");
+			caps.setBrowserName("chrome");
 
-			//caps.setCapability(CapabilityType.BROWSER_NAME, "edge");
+//			caps.setCapability(CapabilityType.BROWSER_NAME, "edge");
 			
-			//WebDriver driver = new RemoteWebDriver(new URI("http://192.168.1.6:4444").toURL(), caps);
-			WebDriver driver = new ChromeDriver();
+			WebDriver driver = new RemoteWebDriver(new URI("http://192.168.1.5:4444").toURL(), caps);
+//			WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 			driver.get("https://www.amazon.in/");
 			Assert.assertTrue(driver.getTitle().contains("Amazon"), "Title does not contain 'Amazon'");
